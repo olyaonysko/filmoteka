@@ -10,6 +10,7 @@ export function drawWatchedFilmList() {
   let fragment = document.createDocumentFragment();
 
   // refs.libraryList.classList.add('visually-hidden');
+  
 
   if (localStorageArray === null || localStorageArray.length === 0) {
     const listItemMessage = document.createElement('li');
