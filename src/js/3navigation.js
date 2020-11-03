@@ -5,12 +5,13 @@ import { showDetails, toggleToQueue, toggleToWatched} from './4filmDetailsPage'
 let selectFilm = [];
 
 refs.libraryPage.classList.add('hidden');
-refs.detailsSectionBlock.classList.add('hidden');
+refs.detailsSectionBlock.classList.add('visually-hidden');
 
 function activeLibraryPage() {
     refs.homePage.classList.add('hidden');
-    refs.detailsSectionBlock.classList.add('hidden');
+    refs.detailsSectionBlock.classList.add('visually-hidden');
     refs.libraryPage.classList.remove('hidden')
+    refs.backToTopBtn.classList.remove('hidden');
     
     drawQueueFilmList();
     refs.btnToQueueList.classList.add('undreline');
@@ -28,7 +29,8 @@ document.querySelector('.js-details__watched').removeEventListener('click', togg
 function activeHomePage() {
     refs.homePage.classList.remove('hidden');
     refs.movieList.classList.remove('hidden');
-    refs.detailsSectionBlock.classList.add('hidden');
+    refs.backToTopBtn.classList.remove('hidden');
+    refs.detailsSectionBlock.classList.add('visually-hidden');
     refs.libraryPage.classList.add('hidden');
 
     refs.btnToQueueList.removeEventListener('click', drawQueueFilmList);
@@ -44,8 +46,9 @@ function activeHomePage() {
  export default function activeDetailsPage(movieId, itsLibraryFilm) {
      refs.homePage.classList.add('hidden');
      refs.movieList.classList.add('hidden');
-     refs.footerContainer.classList.add('hidden');
-     refs.detailsSectionBlock.classList.remove('hidden')
+     refs.backToTopBtn.classList.add('hidden');
+    //  refs.footerContainer.classList.add('hidden');
+     refs.detailsSectionBlock.classList.remove('visually-hidden')
     //  refs.libraryPage.classList.add('visually-hidden');
      
       if (itsLibraryFilm) {
@@ -60,7 +63,8 @@ function activeHomePage() {
      button.addEventListener('click', () => {
          refs.homePage.classList.remove('hidden');
          refs.movieList.classList.remove('hidden');
-         refs.footerContainer.classList.remove('hidden');
+         refs.backToTopBtn.classList.remove('hidden');
+        //    refs.footerContainer.classList.remove('hidden');
          refs.detailsSectionBlock.classList.add('visually-hidden')
      });
 
