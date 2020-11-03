@@ -2,8 +2,9 @@
   display: flex;
   justify-content: center;
   padding: 10px 0 15px;
-  margin-bottom: 10px;
+  margin-bottom: 30px;
   width: 100%;
+  box-shadow: 0px 5px 9px 1px rgba(0, 0, 0, 0.23);
 }
 
 .btn {
@@ -52,33 +53,84 @@
 
   &-list {
     list-style: none;
-    width: 93%;
+    // width: 93%;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto 28px;
+    justify-content: center;
+    // margin: 0 auto 28px;
+    // width: 276px;
   }
 
   &__filmItem {
+    // display: flex;
     cursor: pointer;
     position: relative;
+    height: 156px;
+    margin: 0 auto 20px;
+    // max-width: 276px;
+    // border-radius: 10px;
+  }
+
+  &__img {
+    border-radius: 10px;
+    max-width: 300px;
   }
 }
 
-@media (min-width: 760px) {
-  .libraryPage-list {
-    width: 400px;
+@media (min-width: 768px) and (max-width: 1023px) {
+  .libraryPage {
+    &__filmItem {
+      // display: flex;
+      cursor: pointer;
+      position: relative;
+      height: 156px;
+      margin: 0 auto 40px;
+      // max-width: 276px;
+      // border-radius: 10px;
+    }
+    &__filmItem {
+      // display: flex;
+      cursor: pointer;
+      position: relative;
+      height: 186px;
+      margin: 0 0 10px 20px;
+      width: 330px;
+      // max-width: 276px;
+      // border-radius: 10px;
+    }
+    &__img {
+      min-width: 330px;
+      // height: 244px;
+    }
   }
 }
 
 @media (min-width: 1024px) {
   .libraryPage-list {
-    margin: 30px 0;
-    width: 470px;
-    max-width: 964px;
+    margin: 30px 0 0 30px;
+    // width: 470px;
+    // max-width: 964px;
   }
 
   .library__btn {
     width: 300px;
+  }
+
+  .libraryPage {
+    &__img {
+      min-width: 470px;
+      height: 244px;
+    }
+    &__filmItem {
+      // display: flex;
+      cursor: pointer;
+      position: relative;
+      height: 250px;
+      margin: 0 10px 0px;
+      width: 470px;
+      // max-width: 276px;
+      // border-radius: 10px;
+    }
   }
 }
