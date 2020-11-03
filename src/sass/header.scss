@@ -1,5 +1,6 @@
 .header {
   background-color: #77c1bb;
+  position: relative;
 
   &__container {
     width: 300px;
@@ -47,9 +48,9 @@
       cursor: pointer;
       border-bottom: 3px solid #77c1bb;
 
-      &:hover {
-        border-bottom: 3px solid black;
-      }
+      // &:hover {
+      //   border-bottom: 3px solid black;
+      // }
     }
 
     &-item {
@@ -62,15 +63,45 @@
       cursor: pointer;
       border-bottom: 3px solid #77c1bb;
 
-      &:hover {
-        border-bottom: 3px solid black;
-      }
+      // &:hover {
+      //   border-bottom: 3px solid black;
+      // }
 
       :first-child {
         margin-right: 48px;
       }
     }
   }
+}
+
+.nav-header {
+  min-width: 150px;
+  // position: relative;
+}
+
+.und::after {
+  visibility: visible;
+  text-decoration: none;
+  margin-top: 12px;
+  content: '';
+  display: table;
+  transform: translate(-30%);
+  width: 132px;
+  height: 2px;
+  background-color: #372c48;
+  position: absolute;
+}
+.und1::after {
+  visibility: visible;
+  text-decoration: none;
+  margin-top: 12px;
+  content: '';
+  display: table;
+  transform: translate(-10%);
+  width: 132px;
+  height: 2px;
+  background-color: #372c48;
+  position: absolute;
 }
 
 @media (min-width: 768px) {
