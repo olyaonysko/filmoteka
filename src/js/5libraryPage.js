@@ -5,22 +5,19 @@ const libraryList = document.querySelector('.libraryPage-list');
 
 export function drawWatchedFilmList() {
     libraryList.innerHTML = '';
-
   const localStorageArray = JSON.parse(localStorage.getItem('filmsWatched'));
   let fragment = document.createDocumentFragment();
 
-  // refs.libraryList.classList.add('visually-hidden');
   
 
-  if (localStorageArray === null || localStorageArray.length === 0) {
+  if (localStorageArray === null ||localStorageArray.length === 0) {
     const listItemMessage = document.createElement('li');
-    listItemMessage.classList.add('visually-hiddens'); // anyClass
+    listItemMessage.classList.add('libraryPage__filmItem'); 
     listItemMessage.textContent =
-      'You do not have to queue movies to watch. Add them.';
+      'You do not have WATCHED movies. Add them.';
     libraryList.append(listItemMessage);
-    return
   }
-  if (localStorageArray !== null && localStorageArray.length !== 0) {
+  if (localStorageArray !== null && localStorageArray.length !== 0) {  
     localStorageArray.forEach(film =>
       fragment.append(
         createLibraryCardFunc(
@@ -34,9 +31,8 @@ export function drawWatchedFilmList() {
     libraryList.append(fragment);
   }
   
-  refs.btnToWatchList.classList.remove('libraryPage__btn--active');
-  refs.btnToQueueList.classList.add('libraryPage__btn--active');
-  //  refs.libraryList.classList.add('visually-hidden');
+  refs.btnToQueueList.classList.remove('libraryPage__btn--active');
+  refs.btnToWatchList.classList.add('libraryPage__btn--active');
 }
 
 export function drawQueueFilmList() {
@@ -44,15 +40,12 @@ export function drawQueueFilmList() {
 
   const localStorageArray = JSON.parse(localStorage.getItem('filmsQueue'));
   let fragment = document.createDocumentFragment();
-console.log(localStorageArray);
-  // refs.libraryList.classList.add('visually-hidden');
   if (localStorageArray === null || localStorageArray.length === 0) {
     const listItemMessage = document.createElement('li');
-    listItemMessage.classList.add('visually-hiddens'); // anyClass
+    listItemMessage.classList.add('libraryPage__filmItem'); 
     listItemMessage.textContent =
-      'You do not have to queue movies to watch. Add them.';
+      'You do not have to QUEUE movies to watch. Add them.';
     libraryList.append(listItemMessage);
-    return
   }
   if (localStorageArray !== null && localStorageArray.length !== 0) {
     localStorageArray.forEach(film =>
@@ -71,6 +64,7 @@ console.log(localStorageArray);
 
   refs.btnToWatchList.classList.remove('libraryPage__btn--active');
   refs.btnToQueueList.classList.add('libraryPage__btn--active');
+ 
 }
 
 function createLibraryCardFunc(name, imgPath, movieId, voteAverage) {
@@ -92,6 +86,6 @@ function createLibraryCardFunc(name, imgPath, movieId, voteAverage) {
   listItem.append(img, movieName, voteFilm);
 
   listItem.addEventListener('click', () => activeDetailsPage(movieId, true));
-// localStorage.clear()
+
   return listItem;
 }

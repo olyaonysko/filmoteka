@@ -12,13 +12,14 @@ function activeLibraryPage() {
     refs.detailsSectionBlock.classList.add('visually-hidden');
     refs.libraryPage.classList.remove('hidden')
     refs.backToTopBtn.classList.remove('hidden');
+    // localStorage.clear()
     
     drawQueueFilmList();
     refs.btnToQueueList.classList.add('undreline');
     refs.btnToQueueList.addEventListener('click', drawQueueFilmList);
     refs.btnToWatchList.addEventListener('click', drawWatchedFilmList);
-document.querySelector('.js-details__queue').removeEventListener('click', toggleToQueue);
-document.querySelector('.js-details__watched').removeEventListener('click', toggleToWatched);
+// document.querySelector('.js-details__queue').removeEventListener('click', toggleToQueue);
+// document.querySelector('.js-details__watched').removeEventListener('click', toggleToWatched);
 
 
 
