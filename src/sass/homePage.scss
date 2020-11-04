@@ -79,10 +79,12 @@
     height: 156px;
     position: relative;
     transition: all 0.3s linear;
-    background-image: linear-gradient(
+    background-image: url("../images/noposter.jpg"), linear-gradient(
       rgba(0, 0, 0, 0) 40%,
       rgba(0, 0, 0, 0.9) 100%
     );
+    background-repeat: no-repeat;
+    background-size: cover;
     &:last-child {
       margin-bottom: 0px;
     }
@@ -129,10 +131,10 @@
     &--next {
       margin-right: 0;
     }
+  }
 
-    &--value {
-      cursor: none;
-    }
+  &__value {
+    cursor: auto;
   }
 }
 
