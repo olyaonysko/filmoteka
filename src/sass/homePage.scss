@@ -79,12 +79,11 @@
     height: 156px;
     position: relative;
     transition: all 0.3s linear;
-    background-image: url("../images/noposter.jpg"), linear-gradient(
-      rgba(0, 0, 0, 0) 40%,
-      rgba(0, 0, 0, 0.9) 100%
-    );
+    background-image: url('../images/noposter.jpg'),
+      linear-gradient(rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 0.9) 100%);
     background-repeat: no-repeat;
     background-size: cover;
+    border-radius: 10px;
     &:last-child {
       margin-bottom: 0px;
     }
@@ -102,7 +101,7 @@
     &-name {
       position: absolute;
       color: #ffffff;
-      font-size: 12px;
+      font-size: 20px;
       font-weight: 500;
       z-index: 10;
       bottom: 14px;
@@ -168,14 +167,11 @@
 
 @media (min-width: 1024px) {
   .homePage {
-    
-
     &__movieList {
       margin-bottom: 20px;
       width: 980px;
       margin: 0 auto 20px;
       display: flex;
-      
     }
 
     &__movieItem {
