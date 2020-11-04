@@ -9,9 +9,6 @@
 
 .btn {
   cursor: pointer;
-  // &:hover {
-  //   background: #77c1bb;
-  // }
 }
 
 .libraryPage__btn {
@@ -25,7 +22,6 @@
   &--active {
     background: #77c1bb;
     color: #f3f6f6;
-    // border-bottom: none;
   }
 }
 
@@ -53,17 +49,13 @@
 
   &-list {
     list-style: none;
-    // width: 93%;
     margin-bottom: 20px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    // margin: 0 auto 28px;
-    // width: 276px;
   }
 
   &__filmItem {
-    // display: flex;
     cursor: pointer;
     position: relative;
     height: 156px;
@@ -79,14 +71,12 @@
 @media (min-width: 768px) and (max-width: 1023px) {
   .libraryPage {
     &__filmItem {
-      // display: flex;
       cursor: pointer;
       position: relative;
       height: 156px;
       margin: 0 auto 40px;
     }
     &__filmItem {
-      // display: flex;
       cursor: pointer;
       position: relative;
       height: 186px;
@@ -95,7 +85,6 @@
     }
     &__img {
       min-width: 330px;
-      // height: 244px;
     }
   }
 }
@@ -103,8 +92,6 @@
 @media (min-width: 1024px) {
   .libraryPage-list {
     margin: 30px 0 0 30px;
-    // width: 470px;
-    // max-width: 964px;
   }
 
   .library__btn {
@@ -117,14 +104,11 @@
       height: 244px;
     }
     &__filmItem {
-      // display: flex;
       cursor: pointer;
       position: relative;
       height: 250px;
       margin: 0 10px 0px;
       width: 470px;
-      // max-width: 276px;
-      // border-radius: 10px;
     }
   }
 }

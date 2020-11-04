@@ -16,7 +16,6 @@ function activeLibraryPage() {
   refs.detailsSectionBlock.classList.add('visually-hidden');
   refs.libraryPage.classList.remove('hidden');
   refs.backToTopBtn.classList.remove('hidden');
-  // localStorage.clear()
 
   refs.linkLibrary.classList.add('und1');
   refs.linkHomePage.classList.remove('und');
@@ -25,11 +24,7 @@ function activeLibraryPage() {
   refs.btnToQueueList.classList.add('undreline');
   refs.btnToQueueList.addEventListener('click', drawQueueFilmList);
   refs.btnToWatchList.addEventListener('click', drawWatchedFilmList);
-  // document.querySelector('.js-details__queue').removeEventListener('click', toggleToQueue);
-  // document.querySelector('.js-details__watched').removeEventListener('click', toggleToWatched);
 
-  //   refs.prevBtn.removeEventListener('click', plaginationNavigation);
-  //   refs.nextBtn.removeEventListener('click', plaginationNavigation);
 }
 
 function activeHomePage() {
@@ -45,20 +40,15 @@ function activeHomePage() {
   refs.btnToQueueList.removeEventListener('click', drawQueueFilmList);
   refs.btnToWatchList.removeEventListener('click', drawWatchedFilmList);
 
-  // refs.addQueueBtn.removeEventListener('click', toggleToQueue);
-  // refs.addWatchedBtn.removeEventListener('click', toggleToWatched);
-
-  // refs.prevBtn.addEventListener('click', plaginationNavigation);
-  // refs.nextBtn.addEventListener('click', plaginationNavigation);
 }
 
 export default function activeDetailsPage(movieId, itsLibraryFilm) {
   refs.homePage.classList.add('hidden');
   refs.movieList.classList.add('hidden');
   refs.backToTopBtn.classList.add('hidden');
-  //  refs.footerContainer.classList.add('hidden');
+  
   refs.detailsSectionBlock.classList.remove('visually-hidden');
-  //  refs.libraryPage.classList.add('visually-hidden');
+  
 
   if (itsLibraryFilm) {
     let allLocalStorageFilms = [
@@ -76,7 +66,7 @@ export default function activeDetailsPage(movieId, itsLibraryFilm) {
     refs.homePage.classList.remove('hidden');
     refs.movieList.classList.remove('hidden');
     refs.backToTopBtn.classList.remove('hidden');
-    //    refs.footerContainer.classList.remove('hidden');
+    
     refs.detailsSectionBlock.classList.add('visually-hidden');
   });
 

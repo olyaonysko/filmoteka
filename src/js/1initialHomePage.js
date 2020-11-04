@@ -4,7 +4,7 @@ let renderFilms = [];
 let genres;
 let pageNumber = 1;
 let inputValue = '';
-// import noPoster from '../images/no-poster.png'
+
 import activeDetailsPage from './3navigation'
 import refs from './refs'
 
@@ -15,12 +15,9 @@ function createCardFunc(imgPath, filmTitle, movieId) {
 
   const img = document.createElement('img');
     img.classList.add('homePage__movieItem-poster');
-    //  if (imgPath === null) {
-    //      img.src = noPoster;
-    //      return;
-    //  }
+    
  img.setAttribute('src', `https://image.tmdb.org/t/p/w500/${imgPath}`)
-    // img.src = `https://image.tmdb.org/t/p/w500/${imgPath}`;
+    
 
   const title = document.createElement('h2');
   title.classList.add('homePage__movieItem-name');
@@ -96,7 +93,7 @@ function handleSearchForm(event) {
 }
 
 function plaginationNavigation(event) {
-    // зробити щоб на початку не було кнопки назад/disabled
+    
   pageNumber === 1 || pageNumber < 1 ? refs.prevBtn.classList.add('hidden') : refs.prevBtn.classList.remove('hidden');
   if (event.target === refs.prevBtn) {
     pageNumber -= 1;
