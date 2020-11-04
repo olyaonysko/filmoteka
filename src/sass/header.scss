@@ -48,9 +48,6 @@
       cursor: pointer;
       border-bottom: 3px solid #77c1bb;
 
-      // &:hover {
-      //   border-bottom: 3px solid black;
-      // }
     }
 
     &-item {
@@ -63,10 +60,6 @@
       cursor: pointer;
       border-bottom: 3px solid #77c1bb;
 
-      // &:hover {
-      //   border-bottom: 3px solid black;
-      // }
-
       :first-child {
         margin-right: 48px;
       }
@@ -76,7 +69,6 @@
 
 .nav-header {
   min-width: 150px;
-  // position: relative;
 }
 
 .und::after {

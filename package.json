@@ -1,7 +1,7 @@
 {
-  "name": "webpack-starter-kit",
+  "name": "filmoteka_on_vanila_js",
   "version": "1.1.0",
-  "description": "",
+  "description": "Team authors - Bogdan Andrushchenko, Mykola Osadchyi, Yuriy Yuriev, Olya Onysko, Alina Taran",
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --env.mode development --config ./webpack/config.js",
@@ -11,15 +11,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/luxplanjay/webpack-starter-kit.git"
+    "url": "git+https://github.com/fedeveloper2020/filmoteka"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "fedeveloper2020 <bandrushchenko15@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/luxplanjay/webpack-starter-kit/issues"
+    "url": "https://github.com/fedeveloper2020/filmoteka/issues"
   },
-  "homepage": "https://github.com/fedeveloper2020/filmoteka-webpack.git",
+  "homepage": "https://fedeveloper2020.github.io/filmoteka",
   "devDependencies": {
     "@babel/core": "^7.12.3",
     "@babel/plugin-proposal-class-properties": "^7.12.1",
