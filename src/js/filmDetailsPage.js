@@ -1,6 +1,6 @@
 import 'basiclightbox/dist/basicLightbox.min.css';
-import { genres } from './1initialHomePage';
-import { selectFilm } from './3navigation';
+import { genres } from './initialHomePage';
+import { selectFilm } from './navigation';
 import refs from './refs';
 
 function monitorButtonStatusText() {
@@ -92,7 +92,7 @@ export function showDetails(selectFilm) {
              <h3 class="details-list__about">About</h3>
              <p class="details__text">${selectFilm.overview}</p>
               <div class="button-container">
-            <button class="back-button" id="back-button">Back</button>
+            <button class="back-button" id="back-button">Back Home</button>
              <button class="details__watched js-details__watched">Add to watched</button>
              <button class="details__queue js-details__queue">Add to queue</button>
               </div>

@@ -1,11 +1,11 @@
-import { renderFilms } from './1initialHomePage';
+import { renderFilms } from './initialHomePage';
 import refs from './refs';
-import { drawWatchedFilmList, drawQueueFilmList } from './5libraryPage';
+import { drawWatchedFilmList, drawQueueFilmList } from './libraryPage';
 import {
   showDetails,
   toggleToQueue,
   toggleToWatched,
-} from './4filmDetailsPage';
+} from './filmDetailsPage';
 let selectFilm = [];
 
 refs.libraryPage.classList.add('hidden');
@@ -24,7 +24,7 @@ function activeLibraryPage() {
   refs.btnToQueueList.classList.add('undreline');
   refs.btnToQueueList.addEventListener('click', drawQueueFilmList);
   refs.btnToWatchList.addEventListener('click', drawWatchedFilmList);
-
+  // clickToBackBtn();
 }
 
 function activeHomePage() {
@@ -39,16 +39,14 @@ function activeHomePage() {
 
   refs.btnToQueueList.removeEventListener('click', drawQueueFilmList);
   refs.btnToWatchList.removeEventListener('click', drawWatchedFilmList);
-
 }
 
 export default function activeDetailsPage(movieId, itsLibraryFilm) {
   refs.homePage.classList.add('hidden');
   refs.movieList.classList.add('hidden');
   refs.backToTopBtn.classList.add('hidden');
-  
+
   refs.detailsSectionBlock.classList.remove('visually-hidden');
-  
 
   if (itsLibraryFilm) {
     let allLocalStorageFilms = [
@@ -61,14 +59,15 @@ export default function activeDetailsPage(movieId, itsLibraryFilm) {
   }
   showDetails(selectFilm);
 
-  const button = document.querySelector('#back-button');
-  button.addEventListener('click', () => {
-    refs.homePage.classList.remove('hidden');
-    refs.movieList.classList.remove('hidden');
-    refs.backToTopBtn.classList.remove('hidden');
-    
-    refs.detailsSectionBlock.classList.add('visually-hidden');
-  });
+ 
+
+  const buttonBack = document.querySelector('#back-button');
+  buttonBack.addEventListener('click',()=>{
+    activeHomePage()
+
+  })
+
+ 
 
   document
     .querySelector('.js-details__queue')
@@ -85,6 +84,6 @@ refs.linkHomePage.addEventListener('click', activeHomePage);
 refs.linkLibrary.addEventListener('click', activeLibraryPage);
 refs.linkLogotype.addEventListener('click', activeHomePage);
 
+
+
 export { selectFilm };
-
-

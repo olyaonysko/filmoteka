@@ -1,2 +1,4 @@
 # onlinecinema
-Teamwork №2 - HTML, SASS, JS
+Teamwork Filmoteka
+
+Application for search film on VanilaJS

@@ -1,5 +1,5 @@
 import refs from './refs';
-import activeDetailsPage from './3navigation';
+import activeDetailsPage from './navigation';
 
 const libraryList = document.querySelector('.libraryPage-list');
 
