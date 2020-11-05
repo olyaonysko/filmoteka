@@ -91,10 +91,12 @@ function handleSearchForm(event) {
   refs.searchForm.reset();
   fetchFilms();
 }
-
+pageNumber === 1 ? refs.prevBtn.setAttribute('disabled', "disabled") : refs.prevBtn.removeAttribute('disabled', "disabled");
 function plaginationNavigation(event) {
     
-  pageNumber === 1 || pageNumber < 1 ? refs.prevBtn.classList.add('hidden') : refs.prevBtn.classList.remove('hidden');
+  pageNumber === 2 || pageNumber < 1 ? refs.prevBtn.setAttribute('disabled', "disabled") : refs.prevBtn.removeAttribute('disabled', "disabled");
+  
+    //  : refs.prevBtn.classList.remove('hidden');
   if (event.target === refs.prevBtn) {
     pageNumber -= 1;
     scrollToTop();
@@ -114,7 +116,7 @@ function plaginationNavigation(event) {
       fetchFilms();
     }
   }
-  pageNumber === 1 || pageNumber < 1 ? refs.prevBtn.classList.add('hidden') : refs.prevBtn.classList.remove('hidden');
+  // pageNumber === 1 || pageNumber < 1 ? refs.prevBtn.classList.add('hidden') : refs.prevBtn.classList.remove('hidden');
 }
 
 function clearContainer() {
