@@ -1,5 +1,5 @@
 
-import { renderFilms, pageNumber, fetchPopularMoviesList } from './1initialHomePage';
+import { renderFilms } from './initialHomePage';
 import refs from './refs';
 import { drawWatchedFilmList, drawQueueFilmList } from './libraryPage';
 import {
@@ -25,7 +25,6 @@ function activeLibraryPage() {
   refs.btnToQueueList.classList.add('undreline');
   refs.btnToQueueList.addEventListener('click', drawQueueFilmList);
   refs.btnToWatchList.addEventListener('click', drawWatchedFilmList);
-  // clickToBackBtn();
 }
 
 function activeHomePage() {
