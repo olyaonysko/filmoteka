@@ -91,14 +91,14 @@ function handleSearchForm(event) {
   refs.searchForm.reset();
   fetchFilms();
 }
-pageNumber === 1 ? refs.prevBtn.setAttribute('disabled', "disabled") : refs.prevBtn.removeAttribute('disabled', "disabled");
+
+pageNumber === 1 ? refs.prevBtn.setAttribute('disabled', 'disabled') : refs.prevBtn.removeAttribute('disabled', 'disabled');
 function plaginationNavigation(event) {
     
-  pageNumber === 2 || pageNumber < 1 ? refs.prevBtn.setAttribute('disabled', "disabled") : refs.prevBtn.removeAttribute('disabled', "disabled");
   
-    //  : refs.prevBtn.classList.remove('hidden');
   if (event.target === refs.prevBtn) {
     pageNumber -= 1;
+    pageNumber === 1 ? refs.prevBtn.setAttribute('disabled', 'disabled') : refs.prevBtn.removeAttribute('disabled', 'disabled');
     scrollToTop();
     refs.pageValue.textContent = pageNumber;
     if (inputValue === '') {
@@ -108,6 +108,7 @@ function plaginationNavigation(event) {
     }
   } else {
     pageNumber += 1;
+    pageNumber === 1 ? refs.prevBtn.setAttribute('disabled', 'disabled') : refs.prevBtn.removeAttribute('disabled', 'disabled');
     scrollToTop();
     refs.pageValue.textContent = pageNumber;
     if (inputValue === '') {
