@@ -5,7 +5,7 @@ let genres;
 let pageNumber = 1;
 let inputValue = '';
 
-import activeDetailsPage from './3navigation'
+import activeDetailsPage from './navigation'
 import refs from './refs'
 
 function createCardFunc(imgPath, filmTitle, movieId) {
