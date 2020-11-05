@@ -62,6 +62,8 @@ function fetchFilms() {
   fetch(`${baseURL}/search/movie?api_key=${apiKey}&language=en-US&page=${pageNumber}&include_adult=false&query=${inputValue}`)
     .then(data => data.json())
     .then(films => {
+      pageNumber === 1 || pageNumber < 1 ? refs.prevBtn.classList.add('hidden') : refs.prevBtn.classList.remove('hidden');
+      pageNumber === films.total_pages ? refs.nextBtn.classList.add('hidden') : refs.nextBtn.classList.remove('hidden');
       if (films.results.length === 0) {
         refs.buttonContainer.classList.add('hidden');
         refs.errorRef.textContent = "Sorry, but there are no exact matches :(";
