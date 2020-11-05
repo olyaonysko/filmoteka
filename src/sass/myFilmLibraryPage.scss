@@ -1,3 +1,9 @@
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
 .library-button-container {
   display: flex;
   justify-content: center;
@@ -68,6 +74,10 @@
     max-width: 300px;
   }
 }
+
+// .footer {
+//   flex: 0 0 auto;
+// }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .libraryPage {

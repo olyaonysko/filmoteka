@@ -1,4 +1,5 @@
-import { renderFilms } from './initialHomePage';
+
+import { renderFilms, pageNumber, fetchPopularMoviesList } from './1initialHomePage';
 import refs from './refs';
 import { drawWatchedFilmList, drawQueueFilmList } from './libraryPage';
 import {
@@ -59,6 +60,7 @@ export default function activeDetailsPage(movieId, itsLibraryFilm) {
   }
   showDetails(selectFilm);
 
+
  
 
   const buttonBack = document.querySelector('#back-button');
@@ -68,6 +70,7 @@ export default function activeDetailsPage(movieId, itsLibraryFilm) {
   })
 
  
+
 
   document
     .querySelector('.js-details__queue')

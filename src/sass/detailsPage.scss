@@ -5,31 +5,53 @@
   margin: 0 auto;
 }
 
-.button-container {
-  display: flex;
-  flex-direction: column;
-  margin: 32px 94px;
-}
-
 .back-button,
 .details__watched,
 .details__queue {
+  display: inline-flex;
+  align-items: center;
   font-size: 10px;
   text-transform: uppercase;
-  width: 120px;
-  height: 30px;
-  background-color: #fff;
-  border: 1px solid #000;
-  border-radius: 8px;
+  padding: 6px 10px;
+  color: #904c6e;
+  background: white;
+  border: 1px solid;
   cursor: pointer;
-  transition: all 0.3s linear;
-  margin-bottom: 10px;
+  transition: 0.3s linear;
+  margin: 0 6px 10px 0;
+
   &:hover {
-    background-color: #ff6b08;
-    border: 1px solid #ff6b08;
-    color: #fff;
+    background: #b2e8ea;
+    color: #a9a9a9;
+    box-shadow: 5px 7px 15px -6px #000000;
+  }
+
+  &:after {
+    width: 15px;
+    height: 15px;
+    margin-left: 12px;
+    padding-left: 6px;
+    border-left: 1px solid;
   }
 }
+
+.details__queue:after {
+  content: url(../images/ico/calendar-plus.png);
+}
+
+.details__watched:after {
+  padding-top: 2px;
+  content: url(../images/ico/video.png);
+}
+
+.back-button:after {
+  content: url(../images/ico/back.png);
+}
+
+.button-container {
+  width: 300px;
+}
+
 .details {
   padding: 20px 0 20px;
   display: flex;
@@ -67,8 +89,6 @@
     font-family: 'Roboto';
     font-size: 14px;
   }
-
- 
 }
 
 .details-list {
@@ -115,18 +135,6 @@
     display: flex;
     justify-content: space-between;
     width: 710px;
-  }
-
-  .button-container {
-    justify-content: center;
-    flex-direction: row;
-    margin: 0px;
-  }
-
-  .back-button,
-  .details__watched,
-  .details__queue {
-    margin: 0px 10px 0px 0px;
   }
 
   .details {
