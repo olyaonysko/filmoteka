@@ -24,6 +24,6 @@ export default {
     linkHomePage: document.querySelector('#js-link-homepage'),
     linkLogotype: document.querySelector('#js-logotype'),
     libraryList: document.querySelector('.libraryPage-list'),
-    backToTopBtn: document.querySelector('.btn-up')
+    backToTopBtn: document.querySelector('.btn-up'),
 }
 

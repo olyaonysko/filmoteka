@@ -131,8 +131,17 @@ function scrollToTop() {
 refs.backToTopBtn.addEventListener('click', scrollToTop)
 
 
- refs.prevBtn.addEventListener('click', plaginationNavigation);
- refs.nextBtn.addEventListener('click', plaginationNavigation);
- refs.searchForm.addEventListener('submit', handleSearchForm);
+refs.prevBtn.addEventListener('click', plaginationNavigation);
+refs.nextBtn.addEventListener('click', plaginationNavigation);
+refs.searchForm.addEventListener('submit', handleSearchForm);
+refs.linkLogotype.addEventListener('click', () => {
+  pageNumber = 1;
+  refs.pageValue.textContent = pageNumber
+  fetchPopularMoviesList();
+  refs.prevBtn.classList.add('hidden');
+  refs.title.classList.remove('hidden');
+  refs.errorRef.classList.add('hidden');
+  refs.buttonContainer.classList.remove('hidden');
+ })
 
-export { renderFilms, genres };
+export { renderFilms, genres, fetchPopularMoviesList };

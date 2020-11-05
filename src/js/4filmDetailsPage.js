@@ -92,9 +92,9 @@ export function showDetails(selectFilm) {
              <h3 class="details-list__about">About</h3>
              <p class="details__text">${selectFilm.overview}</p>
               <div class="button-container">
-            <button class="back-button" id="back-button">Back</button>
              <button class="details__watched js-details__watched">Add to watched</button>
              <button class="details__queue js-details__queue">Add to queue</button>
+              <button class="back-button" id="back-button">Back</button>
               </div>
          </div>
      </div>`)
