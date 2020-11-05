@@ -1,4 +1,4 @@
-import { renderFilms } from './1initialHomePage';
+import { renderFilms, pageNumber, fetchPopularMoviesList } from './1initialHomePage';
 import refs from './refs';
 import { drawWatchedFilmList, drawQueueFilmList } from './5libraryPage';
 import {
@@ -62,6 +62,7 @@ export default function activeDetailsPage(movieId, itsLibraryFilm) {
   showDetails(selectFilm);
 
   const button = document.querySelector('#back-button');
+
   button.addEventListener('click', () => {
     refs.homePage.classList.remove('hidden');
     refs.movieList.classList.remove('hidden');
