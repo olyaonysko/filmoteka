@@ -67,6 +67,10 @@ body {
     position: relative;
     height: 156px;
     margin: 0 auto 20px;
+    transition: all 0.3s linear;
+    &:hover {
+      transform: scale(1.05);
+    }
   }
 
   &__img {
@@ -74,10 +78,6 @@ body {
     max-width: 300px;
   }
 }
-
-// .footer {
-//   flex: 0 0 auto;
-// }
 
 @media (min-width: 768px) and (max-width: 1023px) {
   .libraryPage {
