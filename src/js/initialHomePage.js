@@ -140,6 +140,7 @@ refs.linkLogotype.addEventListener('click', () => {
   refs.pageValue.textContent = pageNumber
   fetchPopularMoviesList();
   refs.prevBtn.classList.add('hidden');
+  refs.nextBtn.classList.remove('hidden');
   refs.title.classList.remove('hidden');
   refs.errorRef.classList.add('hidden');
   refs.buttonContainer.classList.remove('hidden');

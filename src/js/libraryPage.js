@@ -55,6 +55,7 @@ export function drawQueueFilmList() {
           film.backdrop_path,
           film.id,
           film.vote_average,
+          film.release_date,
         ),
       ),
     );
