@@ -95,7 +95,6 @@ function handleSearchForm(event) {
 }
 
 function plaginationNavigation(event) {
-      // pageNumber === 1 || pageNumber < 1 ? refs.prevBtn.classList.add('hidden') : refs.prevBtn.classList.remove('hidden');
   if (event.target === refs.prevBtn) {
     pageNumber -= 1;
     scrollToTop();
