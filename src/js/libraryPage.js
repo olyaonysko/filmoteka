@@ -73,7 +73,10 @@ function createLibraryCardFunc(name, imgPath, movieId, voteAverage) {
 
   const img = document.createElement('img');
   img.classList.add('libraryPage__img');
-  img.setAttribute('src', `https://image.tmdb.org/t/p/w500${imgPath}`);
+  if (imgPath === null) {
+    img.setAttribute('src', '../images/noposter.jpg');
+  } else {
+  img.setAttribute('src', `https://image.tmdb.org/t/p/w500${imgPath}`); }
 
   const movieName = document.createElement('p');
   movieName.classList.add('libraryPage__movieName');
