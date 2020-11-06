@@ -61,7 +61,9 @@ export function toggleToQueue() {
 
 export function showDetails(selectFilm) {
   refs.detailsSectionBlock.innerHTML = '';
-  const poster = `https://image.tmdb.org/t/p/w500/${selectFilm.poster_path}`;
+  let poster = 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQP8n_VcmefHmHxO3n9bXSMODS_8pGjmKKGbA&usqp=CAU';
+  if (selectFilm.poster_path !== null) {
+  poster = `https://image.tmdb.org/t/p/w500/${selectFilm.poster_path}`;}
   refs.detailsSectionBlock.classList.remove('visually-hidden');
   refs.libraryPage.classList.add('hidden');
   refs.detailsSectionBlock.insertAdjacentHTML(
